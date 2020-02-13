@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">NoPhoneSpam</string>
+
+    <!-- BlacklistActivity -->
+    <string name="blacklist_block_hidden_numbers">Blokuj ukryte numery</string>
+    <string name="blacklist_show_notifications">Pokazuj powiadomienia</string>
+    <string name="blacklist_about">O NoPhoneSpam</string>
+    <string name="blacklist_permissions_required">NoPhoneSpam nie ma udzielonego pozwolenia do działania.</string>
+    <string name="blacklist_request_permissions">Prośba o pozowlenia</string>
+    <plurals name="blacklist_call_details" tools:ignore="MissingQuantity">
+        <item quantity="one">Połączenie o %2$s</item>
+        <item quantity="other">%1$d dzwonił, last: %2$s</item>
+    </plurals>
+    <string name="blacklist_whitelist">Whitelist</string>
+    <string name="blacklist_import">Zaimportuj Blacklist</string>
+    <string name="blacklist_export">Wyeksportuj Blacklist</string>
+    <string name="blacklist_exported_to">Wyeksportowane do</string>
+
+    <!-- EditActivity -->
+    <string name="edit_add_number">Dodaj numer</string>
+    <string name="edit_edit_number">Edytuj numer</string>
+    <string name="edit_save">Zapisz</string>
+    <string name="edit_cancel">Anuluj</string>
+    <string name="edit_delete">Usuń</string>
+    <string name="edit_name">Nazwa</string>
+    <string name="edit_name_hint">Spam</string>
+    <string name="edit_number">Numer</string>
+    <string name="edit_number_hint">+1-555-12345</string>
+    <string name="edit_number_hints">Wprowadź numer w formacie +KRAJ-NUMER (as Android would show in your dialer). Use \"*\" as a wildcard for zero or more digits, and \"#\" for exactly one digit.</string>
+    <string name="edit_must_not_be_empty">Nie może być puste</string>
+    <string name="edit_changes_saved">Zmany zapisane</string>
+
+    <!-- CallReceiver -->
+    <string name="receiver_notify_call_rejected">Połączenia odrzucone</string>
+    <string name="receiver_notify_private_number">Numer prywatny</string>
+    <string name="receiver_notify_unknown_caller">Nieznany numer</string>
+    <string name="call_blocking_unsupported">Nie można blokować połączeń na tej wersji Androida</string>
+</resources>
