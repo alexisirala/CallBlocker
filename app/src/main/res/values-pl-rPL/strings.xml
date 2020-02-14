@@ -5,16 +5,16 @@
     <!-- BlacklistActivity -->
     <string name="blacklist_block_hidden_numbers">Blokuj ukryte numery</string>
     <string name="blacklist_show_notifications">Pokazuj powiadomienia</string>
-    <string name="blacklist_about">O NoPhoneSpam</string>
+    <string name="blacklist_about">Informacje o NoPhoneSpam</string>
     <string name="blacklist_permissions_required">NoPhoneSpam nie ma udzielonego pozwolenia do działania.</string>
     <string name="blacklist_request_permissions">Prośba o pozowlenia</string>
     <plurals name="blacklist_call_details" tools:ignore="MissingQuantity">
         <item quantity="one">Połączenie o %2$s</item>
-        <item quantity="other">%1$d dzwonił, last: %2$s</item>
+        <item quantity="other">%1$d dzwonił, ostatnio: %2$s</item>
     </plurals>
-    <string name="blacklist_whitelist">Whitelist</string>
-    <string name="blacklist_import">Zaimportuj Blacklist</string>
-    <string name="blacklist_export">Wyeksportuj Blacklist</string>
+    <string name="blacklist_whitelist">Whiteliste</string>
+    <string name="blacklist_import">Zaimportuj Blackliste</string>
+    <string name="blacklist_export">Eksportuj Blackliste</string>
     <string name="blacklist_exported_to">Wyeksportowane do</string>
 
     <!-- EditActivity -->
@@ -27,7 +27,7 @@
     <string name="edit_name_hint">Spam</string>
     <string name="edit_number">Numer</string>
     <string name="edit_number_hint">+1-555-12345</string>
-    <string name="edit_number_hints">Wprowadź numer w formacie +KRAJ-NUMER (as Android would show in your dialer). Use \"*\" as a wildcard for zero or more digits, and \"#\" for exactly one digit.</string>
+    <string name="edit_number_hints">Wprowadź numer w formacie +KRAJ-NUMER (jaki pokazałby się w Androidzie). Używaj \"*\" do oznaczania, czy dany ciąg występuje zero lub więcej razy oraz \"#\" dla dokładnie jednego wystąpienia.</string>
     <string name="edit_must_not_be_empty">Nie może być puste</string>
     <string name="edit_changes_saved">Zmany zapisane</string>
 
