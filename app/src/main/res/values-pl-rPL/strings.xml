@@ -12,10 +12,10 @@
         <item quantity="one">Połączenie o %2$s</item>
         <item quantity="other">%1$d dzwonił, ostatnio: %2$s</item>
     </plurals>
-    <string name="blacklist_whitelist">Whiteliste</string>
-    <string name="blacklist_import">Zaimportuj Blackliste</string>
-    <string name="blacklist_export">Eksportuj Blackliste</string>
-    <string name="blacklist_exported_to">Wyeksportowane do</string>
+    <string name="blacklist_whitelist">Whitelista</string>
+    <string name="blacklist_import">Zaimportuj Blacklistę</string>
+    <string name="blacklist_export">Eksportuj Blacklistę</string>
+    <string name="blacklist_exported_to">Wyeksportowano do</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Dodaj numer</string>
@@ -24,7 +24,7 @@
     <string name="edit_cancel">Anuluj</string>
     <string name="edit_delete">Usuń</string>
     <string name="edit_name">Nazwa</string>
-    <string name="edit_name_hint">Spam</string>
+    <string name="edit_name_hint">Niechciany numer</string>
     <string name="edit_number">Numer</string>
     <string name="edit_number_hint">+1-555-12345</string>
     <string name="edit_number_hints">Wprowadź numer w formacie +KRAJ-NUMER (jaki pokazałby się w Androidzie). Używaj \"*\" do oznaczania, czy dany ciąg występuje zero lub więcej razy oraz \"#\" dla dokładnie jednego wystąpienia.</string>
