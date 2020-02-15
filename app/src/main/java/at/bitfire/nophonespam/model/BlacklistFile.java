@@ -42,11 +42,12 @@ public class BlacklistFile extends File {
             fin.close();
             return numbers;
         } catch (IOException exception) {
+            exception.printStackTrace();
             return numbers;
         }
     }
 
-    public boolean store(List<Number> numbers, Activity activity) {
+    public boolean store(List<Number> numbers) {
         try {
             FileOutputStream fout = new FileOutputStream(this);
             for (Number n : numbers) {

@@ -33,6 +33,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
@@ -150,6 +151,32 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         }
     }
 
+    private static class DeleteFromDB extends AsyncTask<Void, Void, Void> {
+
+        private List<String> numbers;
+        private BlacklistActivity context;
+
+        DeleteFromDB(BlacklistActivity context, List<String> numbers) {
+            this.numbers = numbers;
+            this.context = context;
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            DbHelper dbHelper = new DbHelper(context);
+            try {
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                for (String number : numbers)
+                    db.delete(Number._TABLE, Number.NUMBER + "=?", new String[] { number });
+            } finally {
+                dbHelper.close();
+            }
+
+            context.getLoaderManager().restartLoader(0, null, context);
+            return null;
+        }
+    }
+
     protected void deleteSelectedNumbers() {
         final List<String> numbers = new LinkedList<>();
 
@@ -160,22 +187,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 numbers.add(adapter.getItem(position).number);
             }
 
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                DbHelper dbHelper = new DbHelper(BlacklistActivity.this);
-                try {
-                    SQLiteDatabase db = dbHelper.getWritableDatabase();
-                    for (String number : numbers)
-                        db.delete(Number._TABLE, Number.NUMBER + "=?", new String[] { number });
-                } finally {
-                    dbHelper.close();
-                }
-
-                getLoaderManager().restartLoader(0, null, BlacklistActivity.this);
-                return null;
-            }
-        }.execute();
+        new DeleteFromDB(this, numbers).execute();
     }
 
     @Override
@@ -301,7 +313,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         for (int i = 0; i < adapter.getCount(); i++)
             numbers.add(adapter.getItem(i));
 
-        f.store(numbers, this);
+        f.store(numbers);
 
         Toast.makeText(
                 getApplicationContext(),
