@@ -12,9 +12,7 @@ NoPhoneSpam is a simple app that allows you to
 NoPhoneSpam is not intended as a feature-rich call-spam fighting app,
 but as a replacement for Android's missing call blocking feature.
 
-<img src="doc/screen1.jpg" height="300" style="float: left; margin-right: 10px;">
-<img src="doc/screen2.jpg" height="80" style="float: left; margin-right: 10px;">
-<img src="doc/screen3.jpg" height="300">
+<img src="doc/screen1.jpg" height="300" style="float: left;"> | <img src="doc/screen2.jpg" height="80" style="float: left;"> | <img src="doc/screen3.jpg" height="300">
 
 ## License 
 
