@@ -48,6 +48,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -71,7 +73,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
 
     protected String[] fileList;
-    protected static final File basePath = Environment.getExternalStorageDirectory();
+    protected static File basePath;
     protected static final int DIALOG_LOAD_FILE = 1000;
 
     @Override
@@ -121,6 +123,19 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         requestPermissions();
 
         getLoaderManager().initLoader(0, null, this);
+
+        basePath = new File(String.valueOf(getExternalFilesDir("BLACKLIST")));
+        File file = new File(getExternalFilesDir("BLACKLIST"), BlacklistFile.DEFAULT_FILENAME);
+        if(!file.exists()) {
+            FileOutputStream fileOutputStream = null;
+            try {
+                fileOutputStream = new FileOutputStream(file);
+                fileOutputStream.write("blacklist empty".getBytes());
+                fileOutputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     protected void requestPermissions() {
