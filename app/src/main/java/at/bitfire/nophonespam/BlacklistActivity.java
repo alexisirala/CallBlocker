@@ -311,7 +311,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
     }
 
     public void onAbout(MenuItem item) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitlab.com/bitfireAT/NoPhoneSpam/")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/eaglx/NoPhoneSpam/blob/master/README.md")));
     }
 
     public void addNumber(View view) {

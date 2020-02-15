@@ -149,7 +149,7 @@ public class CallReceiver extends BroadcastReceiver {
                 notificationManager.createNotificationChannel(channel);
             }
 
-            Notification notify = new NotificationCompat.Builder(context)
+            Notification notify = new NotificationCompat.Builder(context, "M_CH_ID")
                     .setSmallIcon(R.drawable.ic_launcher_small)
                     .setContentTitle(context.getString(R.string.receiver_notify_call_rejected))
                     .setContentText(number != null ? (number.name != null ? number.name : number.number) : context.getString(R.string.receiver_notify_private_number))
