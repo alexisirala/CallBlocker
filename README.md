@@ -1,6 +1,6 @@
 # NoPhoneSpam
 
-Web site: https://gitlab.com/bitfireAT/NoPhoneSpam/
+> Orginal web site: https://gitlab.com/bitfireAT/NoPhoneSpam/
 
 NoPhoneSpam is a simple app that allows you to
 
@@ -12,23 +12,9 @@ NoPhoneSpam is a simple app that allows you to
 NoPhoneSpam is not intended as a feature-rich call-spam fighting app,
 but as a replacement for Android's missing call blocking feature.
 
-[<img src="doc/get-it-on-fdroid.png"
-      alt="Get it on F-Droid"
-      height="80">](https://f-droid.org/app/at.bitfire.nophonespam)
-
-
-## Maintenance Status & Contributions
-
-If you want to contribute, please discuss it here:
-https://gitlab.com/bitfireAT/NoPhoneSpam/issues
-
-Currently, there are no designated maintainers, but
-there are [some people with maintainer privileges](https://gitlab.com/bitfireAT/NoPhoneSpam/-/project_members).
-
-__If you want maintain this project__ or if nobody replies to your
-issue and you want to do something yourself,
-please request the privileges from an [active maintainer](https://gitlab.com/bitfireAT/NoPhoneSpam/-/project_members).
-
+<img src="doc/screen1.jpg" height="300" style="float: left; margin-right: 10px;">
+<img src="doc/screen2.jpg" height="80" style="float: left; margin-right: 10px;">
+<img src="doc/screen3.jpg" height="300">
 
 ## License 
 
