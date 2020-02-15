@@ -128,6 +128,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         requiredPermissions.add(Manifest.permission.CALL_PHONE);
         requiredPermissions.add(Manifest.permission.READ_PHONE_STATE);
         requiredPermissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        requiredPermissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             requiredPermissions.add(Manifest.permission.READ_CALL_LOG);
         }

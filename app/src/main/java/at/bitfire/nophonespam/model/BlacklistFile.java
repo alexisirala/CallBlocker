@@ -61,6 +61,7 @@ public class BlacklistFile extends File {
 
         // if we don't have permission, bail immediately; failure message is already displayed
         } catch (IOException exception) {
+            exception.printStackTrace();
             return false;
         }
     }
