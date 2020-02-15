@@ -105,11 +105,10 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
             @Override
             public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.delete:
-                        deleteSelectedNumbers();
-                        actionMode.finish();
-                        return true;
+                if (menuItem.getItemId() == R.id.delete) {
+                    deleteSelectedNumbers();
+                    actionMode.finish();
+                    return true;
                 }
                 return false;
             }
@@ -303,7 +302,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         }
 
         getLoaderManager().restartLoader(0, null, BlacklistActivity.this);
-        return;
     }
 
     public void onExportBlacklist(MenuItem item) {
@@ -350,12 +348,12 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
     private static class NumberAdapter extends ArrayAdapter<Number> {
 
-        public NumberAdapter(Context context) {
+        NumberAdapter(Context context) {
             super(context, R.layout.blacklist_item);
         }
 
         @Override
-        public View getView(int position, View view, ViewGroup parent) {
+        public View getView(int position, View view, @NonNull ViewGroup parent) {
             if (view == null)
                 view = View.inflate(getContext(), R.layout.blacklist_item, null);
 
@@ -392,7 +390,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
     protected static class NumberLoader extends AsyncTaskLoader<Set<Number>> implements BlacklistObserver.Observer {
 
-        public NumberLoader(Context context) {
+        NumberLoader(Context context) {
             super(context);
         }
 
