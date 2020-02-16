@@ -26,6 +26,7 @@
     <string name="edit_number_hints">Introduce el número en el formato +PREFIJO-NÚMERO. Usa el comodín \"*\" para cero o más dígitos y \"#\" para un solo dígito.</string>
     <string name="edit_must_not_be_empty">no debe dejarse en blanco</string>
     <string name="edit_changes_saved">Cambios guardados</string>
+    <string name="allow_call">Permitir llamada</string>
 
     <!-- CallReceiver -->
     <string name="receiver_notify_call_rejected">Llamada rechazada</string>

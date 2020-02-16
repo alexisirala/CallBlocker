@@ -44,6 +44,17 @@
             android:layout_height="wrap_content"
             android:text="@string/edit_number_hints"/>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/allow_call"
+            android:textSize="24sp" />
+
     </LinearLayout>
 
 </ScrollView>

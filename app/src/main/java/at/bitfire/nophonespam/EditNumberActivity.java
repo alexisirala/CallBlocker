@@ -137,7 +137,7 @@ public class EditNumberActivity extends AppCompatActivity implements LoaderManag
 
         final String number;
 
-        public NumberLoader(Context context, String number) {
+        NumberLoader(Context context, String number) {
             super(context);
             this.number = number;
         }

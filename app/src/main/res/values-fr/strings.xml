@@ -29,6 +29,7 @@
     <string name="edit_number_hints">Entrez le numéro dans le format +CODE-PAYS. Utilisez \"*\" comme joker pour zéro ou plus chiffres, et \"#\" pour exactement un chiffre.</string>
     <string name="edit_must_not_be_empty">ne doit pas être vide</string>
     <string name="edit_changes_saved">Changements enregistrés</string>
+    <string name="allow_call">Autoriser le appel</string>
 
     <!-- CallReceiver -->
     <string name="receiver_notify_call_rejected">Appel rejeté</string>

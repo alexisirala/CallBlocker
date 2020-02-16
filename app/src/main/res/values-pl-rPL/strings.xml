@@ -31,6 +31,7 @@
     <string name="edit_number_hints">Wprowadź numer w formacie +KRAJ-NUMER (jaki pokazałby się w Androidzie). Używaj \"*\" do oznaczania, czy dany ciąg występuje zero lub więcej razy oraz \"#\" dla dokładnie jednego wystąpienia.</string>
     <string name="edit_must_not_be_empty">Nie może być puste</string>
     <string name="edit_changes_saved">Zmany zapisane</string>
+    <string name="allow_call">Zezwól na połączenie</string>
 
     <!-- CallReceiver -->
     <string name="receiver_notify_call_rejected">Połączenia odrzucone</string>
