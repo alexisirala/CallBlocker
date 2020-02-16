@@ -261,8 +261,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         createDialog(DIALOG_LOAD_FILE);
     }
 
-    public Dialog createDialog(int id) {
-        Dialog dialog;
+    public void createDialog(int id) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         if (id == DIALOG_LOAD_FILE) {
@@ -284,9 +283,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 }
             });
         }
-
-        dialog = builder.show();
-        return dialog;
+        builder.show();
     }
 
     public void commitBlacklist(@NonNull BlacklistFile blacklist) {

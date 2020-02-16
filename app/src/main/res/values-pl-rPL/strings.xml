@@ -12,7 +12,7 @@
         <item quantity="one">Połączenie o %2$s</item>
         <item quantity="other">%1$d dzwonił, ostatnio: %2$s</item>
     </plurals>
-    <string name="blacklist_whitelist">Whitelista</string>
+    <string name="blacklist_whitelist">Tryb Whitelisty</string>
     <string name="blacklist_import">Zaimportuj Blacklistę</string>
     <string name="blacklist_export">Eksportuj Blacklistę</string>
     <string name="blacklist_exported_to">Wyeksportowano do</string>
