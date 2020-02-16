@@ -144,9 +144,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         requiredPermissions.add(Manifest.permission.READ_PHONE_STATE);
         requiredPermissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         requiredPermissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            requiredPermissions.add(Manifest.permission.READ_CALL_LOG);
-        }
+        requiredPermissions.add(Manifest.permission.READ_CALL_LOG);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             requiredPermissions.add(Manifest.permission.ANSWER_PHONE_CALLS);
         }
@@ -260,16 +258,14 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
     }
 
     public void onImportBlacklist(MenuItem item) {
-        showDialog(DIALOG_LOAD_FILE);
+        createDialog(DIALOG_LOAD_FILE);
     }
 
-    public Dialog onCreateDialog(int id) {
+    public Dialog createDialog(int id) {
         Dialog dialog;
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        switch(id) {
-        case DIALOG_LOAD_FILE:
-
+        if (id == DIALOG_LOAD_FILE) {
             final int lastDot = BlacklistFile.DEFAULT_FILENAME.lastIndexOf(".");
             final String ext = BlacklistFile.DEFAULT_FILENAME.substring(lastDot);
             FilenameFilter filter = new FilenameFilter() {
@@ -287,7 +283,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                     commitBlacklist(new BlacklistFile(basePath, fileList[which]));
                 }
             });
-            break;
         }
 
         dialog = builder.show();
