@@ -16,7 +16,8 @@ public class Settings {
     private static final String
             PREF_BLOCK_HIDDEN_NUMBERS = "blockHiddenNumbers",
             PREF_NOTIFICATIONS = "notifications",
-            PREF_WHITELIST = "whitelist";
+            PREF_WHITELIST = "whitelist",
+            PREF_DARK_MODE = "darkmode";
 
     private final SharedPreferences pref;
 
@@ -55,6 +56,16 @@ public class Settings {
     public void whitelist(boolean whitelist) {
         pref.edit()
                 .putBoolean(PREF_WHITELIST, whitelist)
+                .apply();
+    }
+
+    public boolean darkmode() {
+        return pref.getBoolean(PREF_DARK_MODE, false);
+    }
+
+    public void darkmode(boolean darkmode) {
+        pref.edit()
+                .putBoolean(PREF_DARK_MODE, darkmode)
                 .apply();
     }
 

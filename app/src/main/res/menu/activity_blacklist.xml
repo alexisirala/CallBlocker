@@ -18,6 +18,13 @@
         android:checkable="true"
         android:onClick="onWhitelist"
         android:title="@string/blacklist_whitelist" />
+
+    <item
+        android:id="@+id/darkmode"
+        android:checkable="true"
+        android:onClick="onDarkMode"
+        android:title="@string/dark_mode" />
+
     <item
         android:id="@+id/import_blacklist"
         android:onClick="onImportBlacklist"

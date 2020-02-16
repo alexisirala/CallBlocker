@@ -13,6 +13,7 @@
         <item quantity="other">%1$d calls, last: %2$s</item>
     </plurals>
     <string name="blacklist_whitelist">Whitelist mode</string>
+    <string name="dark_mode">Dark mode</string>
     <string name="blacklist_import">Import Blacklist</string>
     <string name="blacklist_export">Export Blacklist</string>
     <string name="blacklist_exported_to">Exported to</string>

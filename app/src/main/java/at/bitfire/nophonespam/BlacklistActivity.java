@@ -33,6 +33,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
@@ -44,6 +45,7 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -82,6 +84,12 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         setContentView(R.layout.activity_blacklist);
 
         settings = new Settings(this);
+        if(settings.darkmode()) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
 
         list = (ListView)findViewById(R.id.numbers);
@@ -242,6 +250,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         menu.findItem(R.id.block_hidden_numbers).setChecked(settings.blockHiddenNumbers());
         menu.findItem(R.id.notifications).setChecked(settings.showNotifications());
         menu.findItem(R.id.whitelist).setChecked(settings.whitelist());
+        menu.findItem(R.id.darkmode).setChecked(settings.darkmode());
         return true;
     }
 
@@ -255,6 +264,12 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
     public void onWhitelist(MenuItem item) {
         settings.whitelist(!item.isChecked());
+    }
+
+    public void onDarkMode(MenuItem item) {
+        settings.darkmode(!item.isChecked());
+        finish();
+        startActivity(new Intent(BlacklistActivity.this, BlacklistActivity.this.getClass()));
     }
 
     public void onImportBlacklist(MenuItem item) {
