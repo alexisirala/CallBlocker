@@ -22,6 +22,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class EditNumberActivity extends AppCompatActivity implements LoaderManag
 
     TextView tvName, tvNumber;
 
+    CheckBox checkBoxRule;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class EditNumberActivity extends AppCompatActivity implements LoaderManag
 
         tvName = (TextView)findViewById(R.id.name);
         tvNumber = (TextView)findViewById(R.id.number);
+
+        checkBoxRule = (CheckBox) findViewById(R.id.checkBox);
 
         if (intentNumber != null)
             getLoaderManager().initLoader(0, null, this);
@@ -66,6 +70,8 @@ public class EditNumberActivity extends AppCompatActivity implements LoaderManag
             ContentValues values = new ContentValues(2);
             values.put(Number.NAME, tvName.getText().toString());
             values.put(Number.NUMBER, Number.wildcardsViewToDb(tvNumber.getText().toString()));
+
+            values.put(Number.ALLOW, checkBoxRule.isChecked());
 
             DbHelper dbHelper = new DbHelper(this);
             try {

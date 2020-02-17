@@ -14,10 +14,10 @@
         android:title="@string/blacklist_show_notifications" />
 
     <item
-        android:id="@+id/whitelist"
+        android:id="@+id/block_out_of_list"
         android:checkable="true"
-        android:onClick="onWhitelist"
-        android:title="@string/blacklist_whitelist" />
+        android:onClick="onBlockOutOfList"
+        android:title="@string/block_out_of_list" />
 
     <item
         android:id="@+id/darkmode"

@@ -13,6 +13,10 @@
         <item quantity="other">%1$d Anrufe, zuletzt: %2$s</item>
     </plurals>
     <string name="allow_call">Anruf zulassen</string>
+    <string name="block_out_of_list">Blocknummern aus Liste streichen</string>
+
+    <string name="allow">Erlauben</string>
+    <string name="block">Verbieten</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Nummer hinzufügen</string>

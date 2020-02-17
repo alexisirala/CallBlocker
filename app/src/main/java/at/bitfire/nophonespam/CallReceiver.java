@@ -68,21 +68,31 @@ public class CallReceiver extends BroadcastReceiver {
                     SQLiteDatabase db = dbHelper.getWritableDatabase();
                     Cursor c = db.query(Number._TABLE, null, "? LIKE " + Number.NUMBER, new String[] { incomingNumber }, null, null, null);
                     boolean inList = c.moveToNext();
-                    if (inList && !settings.whitelist()) {
+                    if (inList) {
                         ContentValues values = new ContentValues();
                         DatabaseUtils.cursorRowToContentValues(c, values);
                         Number number = Number.fromValues(values);
 
-                        rejectCall(context, number);
+                        if(!number.allow_call) {
+                            rejectCall(context, number);
 
-                        values.clear();
-                        values.put(Number.LAST_CALL, System.currentTimeMillis());
-                        values.put(Number.TIMES_CALLED, number.timesCalled + 1);
-                        db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
+                            values.clear();
+                            values.put(Number.LAST_CALL, System.currentTimeMillis());
+                            values.put(Number.TIMES_CALLED, number.timesCalled + 1);
+                            db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
 
-                        BlacklistObserver.notifyUpdated();
+                            BlacklistObserver.notifyUpdated();
+                        }
+                        else {
+                            values.clear();
+                            values.put(Number.LAST_CALL, System.currentTimeMillis());
+                            values.put(Number.TIMES_CALLED, number.timesCalled + 1);
+                            db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
 
-                    } else if (!inList && settings.whitelist()) {
+                            BlacklistObserver.notifyUpdated();
+                        }
+
+                    } else if (settings.blockOutOfList()) {
                         Number number = new Number();
                         number.number = incomingNumber;
                         number.name = context.getResources().getString(R.string.receiver_notify_unknown_caller);

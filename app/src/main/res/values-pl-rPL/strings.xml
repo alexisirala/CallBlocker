@@ -12,11 +12,14 @@
         <item quantity="one">Połączenie o %2$s</item>
         <item quantity="other">%1$d dzwonił, ostatnio: %2$s</item>
     </plurals>
-    <string name="blacklist_whitelist">Tryb Whitelisty</string>
+    <string name="block_out_of_list">Zablokuj numery poza listą</string>
     <string name="dark_mode">Tryb nocny</string>
     <string name="blacklist_import">Zaimportuj Blacklistę</string>
     <string name="blacklist_export">Eksportuj Blacklistę</string>
     <string name="blacklist_exported_to">Wyeksportowano do</string>
+
+    <string name="allow">Pozwolony</string>
+    <string name="block">Zablokowany</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Dodaj numer</string>

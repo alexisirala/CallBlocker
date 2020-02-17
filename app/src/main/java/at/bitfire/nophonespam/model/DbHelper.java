@@ -12,13 +12,14 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     public DbHelper(Context context) {
-        super(context, "database", null, 1);
+        super(context, "database", null, DB_VERSION);
     }
 
     @Override
@@ -27,23 +28,15 @@ public class DbHelper extends SQLiteOpenHelper {
                 Number.NUMBER + " TEXT NOT NULL PRIMARY KEY," +
                 Number.NAME + " TEXT NULL," +
                 Number.LAST_CALL + " INTEGER NULL," +
-                Number.TIMES_CALLED + " INTEGER NOT NULL DEFAULT 0" +
+                Number.TIMES_CALLED + " INTEGER NOT NULL DEFAULT 0," +
+                Number.ALLOW + " BOOLEAN NULL" +
         ")");
-
-        ContentValues values = new ContentValues();
-
-        /*values.put(Number.NAME, "Werbekuh Schule BV");
-        values.put(Number.NUMBER, "+431810279346");
-        db.insert(Number._TABLE, null, values);
-
-        values.put(Number.NAME, "Luxemburg");
-        values.put(Number.NUMBER, "+352*");
-        db.insert(Number._TABLE, null, values);*/
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int from, int to) {
+        db.execSQL("DROP TABLE IF EXISTS " + Number._TABLE);
+        onCreate(db);
     }
 
 }

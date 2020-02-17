@@ -249,7 +249,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.findItem(R.id.block_hidden_numbers).setChecked(settings.blockHiddenNumbers());
         menu.findItem(R.id.notifications).setChecked(settings.showNotifications());
-        menu.findItem(R.id.whitelist).setChecked(settings.whitelist());
+        menu.findItem(R.id.block_out_of_list).setChecked(settings.blockOutOfList());
         menu.findItem(R.id.darkmode).setChecked(settings.darkmode());
         return true;
     }
@@ -262,8 +262,8 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         settings.showNotifications(!item.isChecked());
     }
 
-    public void onWhitelist(MenuItem item) {
-        settings.whitelist(!item.isChecked());
+    public void onBlockOutOfList(MenuItem item) {
+        settings.blockOutOfList(!item.isChecked());
     }
 
     public void onDarkMode(MenuItem item) {
@@ -387,6 +387,14 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
             tv = (TextView)view.findViewById(R.id.name);
             tv.setText(number.name);
+
+            tv = (TextView)view.findViewById(R.id.rule);
+            if(number.allow_call) {
+                tv.setText(R.string.allow);
+            }
+            else {
+                tv.setText(R.string.block);
+            }
 
             tv = (TextView)view.findViewById(R.id.stats);
             if (number.lastCall != null) {

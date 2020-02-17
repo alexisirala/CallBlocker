@@ -14,6 +14,13 @@
         tools:text="Name Of Spammer"/>
 
     <TextView
+        android:id="@+id/rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        tools:text="Allow" />
+
+    <TextView
         android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

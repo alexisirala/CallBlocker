@@ -34,9 +34,17 @@ public class BlacklistFile extends File {
             reader = new BufferedReader(new InputStreamReader(fin));
             while ((line = reader.readLine()) != null &&
                     (sep = line.indexOf(END_NUMBER_DELIMETER)) != -1) {
+                int sep2 = line.indexOf(END_NUMBER_DELIMETER, sep + 1);
                 n = new Number();
                 n.number = line.substring(0, sep);
-                n.name = line.substring(sep + END_NUMBER_DELIMETER.length());
+                n.name = line.substring(sep + END_NUMBER_DELIMETER.length(), sep2);
+                String v = line.substring(sep2 + END_NUMBER_DELIMETER.length());
+                if(v.equals("1")) {
+                    n.allow_call = true;
+                }
+                else {
+                    n.allow_call = false;
+                }
                 numbers.add(n);
             }
             fin.close();
@@ -54,6 +62,13 @@ public class BlacklistFile extends File {
                 fout.write(n.number.getBytes());
                 fout.write(END_NUMBER_DELIMETER.getBytes());
                 fout.write(n.name.getBytes());
+                fout.write(END_NUMBER_DELIMETER.getBytes());
+                if(n.allow_call) {
+                    fout.write("1".getBytes());
+                }
+                else {
+                    fout.write("0".getBytes());
+                }
                 fout.write("\n".getBytes());
             }
             fout.close();
