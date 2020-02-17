@@ -313,10 +313,11 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 values = new ContentValues(4);
                 values.put(Number.NAME, number.name);
                 values.put(Number.NUMBER, Number.wildcardsViewToDb(number.number));
+                values.put(Number.ALLOW, number.allow_call);
 
                 exists = db.query(Number._TABLE, null, Number.NUMBER + "=?", new String[]{number.number}, null, null, null).moveToNext();
                 if (exists)
-                    db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
+                    db.update(Number._TABLE, values, Number.NUMBER + "=?" + " and " + Number.ALLOW + "=?", new String[]{number.number, String.valueOf(number.allow_call)});
                 else
                     db.insert(Number._TABLE, null, values);
             }
