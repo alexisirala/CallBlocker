@@ -132,8 +132,8 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
         getLoaderManager().initLoader(0, null, this);
 
-        basePath = new File(String.valueOf(getExternalFilesDir("BLACKLIST")));
-        File file = new File(getExternalFilesDir("BLACKLIST"), BlacklistFile.DEFAULT_FILENAME);
+        basePath = new File(String.valueOf(getExternalFilesDir(null)));
+        File file = new File(getExternalFilesDir(null), BlacklistFile.DEFAULT_FILENAME);
         if(!file.exists()) {
             FileOutputStream fileOutputStream = null;
             try {
@@ -339,7 +339,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
         Toast.makeText(
                 getApplicationContext(),
-                getResources().getText(R.string.blacklist_exported_to) + " " + BlacklistFile.DEFAULT_FILENAME,
+                getResources().getText(R.string.blacklist_exported_to) + " " + getExternalFilesDir(null) + "/" + BlacklistFile.DEFAULT_FILENAME,
                 Toast.LENGTH_LONG
         ).show();
     }

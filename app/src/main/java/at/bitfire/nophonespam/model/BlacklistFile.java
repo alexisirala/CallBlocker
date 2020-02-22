@@ -13,7 +13,7 @@ import java.util.List;
 
 public class BlacklistFile extends File {
 
-    public static final String END_NUMBER_DELIMETER = ": ";
+    public static final String END_NUMBER_DELIMETER = ",";
     public static final String DEFAULT_FILENAME = "NoPhoneSpam_blacklist.txt";
 
     public BlacklistFile(File parent, String child) {
