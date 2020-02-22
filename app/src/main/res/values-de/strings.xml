@@ -28,7 +28,7 @@
     <string name="edit_name_hint">Nerviger Spammer</string>
     <string name="edit_number">Nummer</string>
     <string name="edit_number_hint">+49-123-12345</string>
-    <string name="edit_number_hints">Nummernformat: +LAND-NUMMER. \"*\" kann als Platzhalter für null oder mehr Ziffern und \"#\" für genau eine Ziffer verwendet werden.</string>
+    <string name="edit_number_hints">Nummernformat: +LAND-NUMMER (wie Android in Ihrem Dialer anzeigen würde). \"*\" kann als Platzhalter für null oder mehr Ziffern und \"#\" für genau eine Ziffer verwendet werden.</string>
     <string name="edit_must_not_be_empty">darf nicht leer sein</string>
     <string name="edit_changes_saved">Änderungen gespeichert</string>
 

@@ -31,7 +31,7 @@
     <string name="edit_name_hint">Annoying Spammer</string>
     <string name="edit_number">Number</string>
     <string name="edit_number_hint">+1-555-12345</string>
-    <string name="edit_number_hints">Enter the number in +COUNTRY-NUMBER format (as Android would show in your dialer). Use \"*\" as a wildcard for zero or more digits, and \"#\" for exactly one digit.</string>
+    <string name="edit_number_hints">Enter the number in appropriate format (as Android would show in your dialer e.g. +COUNTRY-NUMBER). Use \"#\" for exactly one digit and \"*\" as a wildcard for zero or more digits (not longer than the correct phone number).</string>
     <string name="edit_must_not_be_empty">Must not be empty</string>
     <string name="edit_changes_saved">Changes saved</string>
     <string name="allow_call">Allow call</string>

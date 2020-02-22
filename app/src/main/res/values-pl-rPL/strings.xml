@@ -31,7 +31,7 @@
     <string name="edit_name_hint">Niechciany numer</string>
     <string name="edit_number">Numer</string>
     <string name="edit_number_hint">+1-555-12345</string>
-    <string name="edit_number_hints">Wprowadź numer w formacie +KRAJ-NUMER (jaki pokazałby się w Androidzie). Używaj \"*\" do oznaczania, czy dany ciąg występuje zero lub więcej razy oraz \"#\" dla dokładnie jednego wystąpienia.</string>
+    <string name="edit_number_hints">Wprowadź numer w odpowiednim formacie (jaki pokazałby się w Androidzie np. +KRAJ-NUMER). Używaj \"#\" dla dowolnej pojedynczej liczby oraz \"*\" do oznaczania dowolnego ciągu liczb (nie dłuższego niż poprawny numer telefonu).</string>
     <string name="edit_must_not_be_empty">Nie może być puste</string>
     <string name="edit_changes_saved">Zmany zapisane</string>
     <string name="allow_call">Zezwól na połączenie</string>

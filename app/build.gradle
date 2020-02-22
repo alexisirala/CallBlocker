@@ -10,7 +10,7 @@ android {
         targetSdkVersion 29
 
         versionCode 12
-        versionName "0.2.11"
+        versionName "0.2.11.1"
     }
     buildTypes {
         release {
