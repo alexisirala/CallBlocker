@@ -10,7 +10,7 @@ CallBlocker is a simple app that allows you to
 CallBlocker is not intended as a feature-rich call-spam fighting app,
 but as a replacement for Android's missing call blocking feature.
 
-<img src="doc/screen1.jpg" height="300"> | <img src="doc/screen2.jpg" height="300"> | <img src="doc/screen3.jpg" height="300"> | <img src="doc/screen4.jpg" height="300"> | <img src="doc/screen5.jpg" height="300">
+<img src="doc/view_1.jpg" height="300"> | <img src="doc/view_2.jpg" height="300"> | <img src="doc/view_3.jpg" height="300"> | <img src="doc/view_4.jpg" height="300"> | <img src="doc/view_5.jpg" height="300">
 
 ## License 
 
