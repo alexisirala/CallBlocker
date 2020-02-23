@@ -108,6 +108,8 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 return false;
             }
 
+
+
             @Override
             public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.delete) {

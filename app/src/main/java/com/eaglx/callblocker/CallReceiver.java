@@ -67,10 +67,26 @@ public class CallReceiver extends BroadcastReceiver {
                 try {
                     SQLiteDatabase db = dbHelper.getWritableDatabase();
                     Cursor c = db.query(Number._TABLE, null, "? LIKE " + Number.NUMBER, new String[] { incomingNumber }, null, null, null);
-                    boolean inList = c.moveToNext();
-                    if (inList) {
-                        ContentValues values = new ContentValues();
+
+                    ContentValues values = new ContentValues();
+                    boolean inList = false;
+
+                    if(c.getCount() > 1) {
+                        while (c.moveToNext()) {
+                            DatabaseUtils.cursorRowToContentValues(c, values);
+                            if(incomingNumber.equals(values.get(Number.NUMBER))) {
+                                inList = true;
+                                break;
+                            }
+                        }
+                    }
+                    else if(c.getCount() == 1) {
+                        c.moveToFirst();
                         DatabaseUtils.cursorRowToContentValues(c, values);
+                        inList = true;
+                    }
+
+                    if (inList) {
                         Number number = Number.fromValues(values);
 
                         if(number.allow == 0) {

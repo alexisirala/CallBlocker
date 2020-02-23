@@ -18,7 +18,7 @@
     <string name="blacklist_export">Eksportuj Blacklistę</string>
     <string name="blacklist_exported_to">Wyeksportowano do</string>
 
-    <string name="allow">Pozwolony</string>
+    <string name="allow">Dozwolony</string>
     <string name="block">Zablokowany</string>
 
     <!-- EditActivity -->
@@ -30,8 +30,8 @@
     <string name="edit_name">Nazwa</string>
     <string name="edit_name_hint">Niechciany numer</string>
     <string name="edit_number">Numer</string>
-    <string name="edit_number_hint">+1-555-12345</string>
-    <string name="edit_number_hints">Wprowadź numer w odpowiednim formacie (jaki pokazałby się w Androidzie np. +KRAJ-NUMER). Używaj \"#\" dla dowolnej pojedynczej liczby oraz \"*\" do oznaczania dowolnego ciągu liczb (nie dłuższego niż poprawny numer telefonu).</string>
+    <string name="edit_number_hint">123456789</string>
+    <string name="edit_number_hints">Wprowadź numer w odpowiednim formacie (jaki pokazałby się w Androidzie np. +KRAJ-NUMER lub tylko NUMER). Używaj \"#\" dla dowolnej pojedynczej liczby oraz \"*\" do oznaczania dowolnego ciągu liczb (nie dłuższego niż poprawny numer telefonu).</string>
     <string name="edit_must_not_be_empty">Nie może być puste</string>
     <string name="edit_changes_saved">Zmany zapisane</string>
     <string name="allow_call">Zezwól na połączenie</string>
