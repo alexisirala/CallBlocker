@@ -38,10 +38,10 @@ public class BlacklistFile extends File {
                 n.name = line.substring(sep + END_NUMBER_DELIMETER.length(), sep2);
                 String v = line.substring(sep2 + END_NUMBER_DELIMETER.length());
                 if(v.equals("1")) {
-                    n.allow_call = true;
+                    n.allow = 1;
                 }
                 else {
-                    n.allow_call = false;
+                    n.allow = 0;
                 }
                 numbers.add(n);
             }
@@ -61,7 +61,7 @@ public class BlacklistFile extends File {
                 fout.write(END_NUMBER_DELIMETER.getBytes());
                 fout.write(n.name.getBytes());
                 fout.write(END_NUMBER_DELIMETER.getBytes());
-                if(n.allow_call) {
+                if(n.allow == 1) {
                     fout.write("1".getBytes());
                 }
                 else {

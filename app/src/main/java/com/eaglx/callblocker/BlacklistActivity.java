@@ -308,11 +308,11 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 values = new ContentValues(4);
                 values.put(Number.NAME, number.name);
                 values.put(Number.NUMBER, Number.wildcardsViewToDb(number.number));
-                values.put(Number.ALLOW, number.allow_call);
+                values.put(Number.ALLOW, number.allow);
 
                 exists = db.query(Number._TABLE, null, Number.NUMBER + "=?", new String[]{number.number}, null, null, null).moveToNext();
                 if (exists)
-                    db.update(Number._TABLE, values, Number.NUMBER + "=?" + " and " + Number.ALLOW + "=?", new String[]{number.number, String.valueOf(number.allow_call)});
+                    db.update(Number._TABLE, values, Number.NUMBER + "=?" + " and " + Number.ALLOW + "=?", new String[]{number.number, String.valueOf(number.allow)});
                 else
                     db.insert(Number._TABLE, null, values);
             }
@@ -385,7 +385,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
             tv.setText(number.name);
 
             tv = (TextView)view.findViewById(R.id.rule);
-            if(number.allow_call) {
+            if(number.allow == 1) {
                 tv.setText(R.string.allow);
             }
             else {

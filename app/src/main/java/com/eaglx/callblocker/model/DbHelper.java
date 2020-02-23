@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final int DB_VERSION = 2;
+    private static final int DB_VERSION = 3;
 
     public DbHelper(Context context) {
         super(context, "database", null, DB_VERSION);
@@ -27,7 +27,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 Number.NAME + " TEXT NULL," +
                 Number.LAST_CALL + " INTEGER NULL," +
                 Number.TIMES_CALLED + " INTEGER NOT NULL DEFAULT 0," +
-                Number.ALLOW + " BOOLEAN NULL" +
+                Number.ALLOW + " INTEGER NULL" +
         ")");
     }
 

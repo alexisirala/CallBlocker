@@ -67,11 +67,16 @@ public class EditNumberActivity extends AppCompatActivity implements LoaderManag
 
     public void onSave(MenuItem item) {
         if (validate()) {
-            ContentValues values = new ContentValues(2);
+            ContentValues values = new ContentValues();
             values.put(Number.NAME, tvName.getText().toString());
             values.put(Number.NUMBER, Number.wildcardsViewToDb(tvNumber.getText().toString()));
 
-            values.put(Number.ALLOW, checkBoxRule.isChecked());
+            if(checkBoxRule.isChecked()) {
+                values.put(Number.ALLOW, 1);
+            }
+            else {
+                values.put(Number.ALLOW, 0);
+            }
 
             DbHelper dbHelper = new DbHelper(this);
             try {
@@ -131,6 +136,12 @@ public class EditNumberActivity extends AppCompatActivity implements LoaderManag
         if (number != null) {
             tvName.setText(number.name);
             tvNumber.setText(Number.wildcardsDbToView(number.number));
+            if(number.allow == 1) {
+                checkBoxRule.setChecked(true);
+            }
+            else {
+                checkBoxRule.setChecked(false);
+            }
         }
     }
 

@@ -73,7 +73,7 @@ public class CallReceiver extends BroadcastReceiver {
                         DatabaseUtils.cursorRowToContentValues(c, values);
                         Number number = Number.fromValues(values);
 
-                        if(!number.allow_call) {
+                        if(number.allow == 0) {
                             rejectCall(context, number);
 
                             values.clear();
