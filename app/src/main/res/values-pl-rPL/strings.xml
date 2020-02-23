@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">NoPhoneSpam</string>
+    <string name="app_name">CallBlocker</string>
 
     <!-- BlacklistActivity -->
     <string name="blacklist_block_hidden_numbers">Blokuj ukryte numery</string>
     <string name="blacklist_show_notifications">Pokazuj powiadomienia</string>
-    <string name="blacklist_about">Informacje o NoPhoneSpam</string>
-    <string name="blacklist_permissions_required">NoPhoneSpam nie ma udzielonego pozwolenia do działania.</string>
+    <string name="blacklist_about">Informacje o CallBlocker</string>
+    <string name="blacklist_permissions_required">CallBlocker nie ma udzielonego pozwolenia do działania.</string>
     <string name="blacklist_request_permissions">Prośba o pozowlenia</string>
     <plurals name="blacklist_call_details" tools:ignore="MissingQuantity">
         <item quantity="one">Połączenie o %2$s</item>

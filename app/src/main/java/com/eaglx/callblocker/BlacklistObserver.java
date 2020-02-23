@@ -6,7 +6,7 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam;
+package com.eaglx.callblocker;
 
 import java.lang.ref.WeakReference;
 import java.util.LinkedList;

@@ -6,7 +6,7 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam;
+package com.eaglx.callblocker;
 
 import android.app.LoaderManager;
 import android.content.AsyncTaskLoader;
@@ -26,8 +26,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import at.bitfire.nophonespam.model.DbHelper;
-import at.bitfire.nophonespam.model.Number;
+import com.eaglx.callblocker.model.DbHelper;
+import com.eaglx.callblocker.model.Number;
 
 public class EditNumberActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Number> {
 

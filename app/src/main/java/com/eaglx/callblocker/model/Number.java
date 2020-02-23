@@ -6,7 +6,7 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam.model;
+package com.eaglx.callblocker.model;
 
 import android.content.ContentValues;
 

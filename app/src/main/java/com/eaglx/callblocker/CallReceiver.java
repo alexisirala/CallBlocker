@@ -6,7 +6,7 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam;
+package com.eaglx.callblocker;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -34,8 +34,8 @@ import com.android.internal.telephony.ITelephony;
 
 import java.lang.reflect.Method;
 
-import at.bitfire.nophonespam.model.DbHelper;
-import at.bitfire.nophonespam.model.Number;
+import com.eaglx.callblocker.model.DbHelper;
+import com.eaglx.callblocker.model.Number;
 
 public class CallReceiver extends BroadcastReceiver {
     private static final String TAG = "NoPhoneSpam";

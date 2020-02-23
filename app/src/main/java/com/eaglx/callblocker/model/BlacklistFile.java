@@ -1,6 +1,4 @@
-package at.bitfire.nophonespam.model;
-
-import android.app.Activity;
+package com.eaglx.callblocker.model;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +12,7 @@ import java.util.List;
 public class BlacklistFile extends File {
 
     public static final String END_NUMBER_DELIMETER = ",";
-    public static final String DEFAULT_FILENAME = "NoPhoneSpam_blacklist.txt";
+    public static final String DEFAULT_FILENAME = "CallBlocker_blacklist.txt";
 
     public BlacklistFile(File parent, String child) {
         super(parent, child);

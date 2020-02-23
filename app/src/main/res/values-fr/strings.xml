@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NoPhoneSpam</string>
+    <string name="app_name">CallBlocker</string>
 
     <!-- BlacklistActivity -->
     <string name="blacklist_block_hidden_numbers">Bloquer les numéros cachés</string>
     <string name="blacklist_show_notifications">Montrer les notifications</string>
-    <string name="blacklist_about">À propos de NoPhoneSpam</string>
-    <string name="blacklist_permissions_required">NoPhoneSpam n\'a pas les permissions nécessaires pour fonctionner.</string>
+    <string name="blacklist_about">À propos de CallBlocker</string>
+    <string name="blacklist_permissions_required">CallBlocker n\'a pas les permissions nécessaires pour fonctionner.</string>
     <string name="blacklist_request_permissions">Demander les permissions</string>
     <plurals name="blacklist_call_details">
         <item quantity="one">Appel à %2$s</item>

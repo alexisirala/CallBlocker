@@ -6,13 +6,11 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam.model;
+package com.eaglx.callblocker.model;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 public class DbHelper extends SQLiteOpenHelper {
 

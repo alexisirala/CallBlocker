@@ -6,11 +6,10 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam;
+package com.eaglx.callblocker;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.LoaderManager;
 import android.content.AsyncTaskLoader;
 import android.content.ContentValues;
@@ -26,7 +25,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -34,7 +32,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
-import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
@@ -45,12 +42,10 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.text.SimpleDateFormat;
@@ -61,9 +56,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import at.bitfire.nophonespam.model.BlacklistFile;
-import at.bitfire.nophonespam.model.DbHelper;
-import at.bitfire.nophonespam.model.Number;
+import com.eaglx.callblocker.model.BlacklistFile;
+import com.eaglx.callblocker.model.DbHelper;
+import com.eaglx.callblocker.model.Number;
 
 public class BlacklistActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Set<Number>>, AdapterView.OnItemClickListener {
 
@@ -345,7 +340,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
     }
 
     public void onAbout(MenuItem item) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/eaglx/NoPhoneSpam")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/eaglx/CallBlocker")));
     }
 
     public void addNumber(View view) {

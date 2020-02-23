@@ -6,7 +6,7 @@
  * http://www.gnu.org/licenses/gpl.html
  */
 
-package at.bitfire.nophonespam;
+package com.eaglx.callblocker;
 
 import android.content.Context;
 import android.content.SharedPreferences;

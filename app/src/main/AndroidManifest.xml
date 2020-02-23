@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:tools="http://schemas.android.com/tools"
-          package="at.bitfire.nophonespam"
+          package="com.eaglx.callblocker"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         
-        <activity android:name=".BlacklistActivity">
+        <activity android:name="com.eaglx.callblocker.BlacklistActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -27,12 +27,12 @@
         </activity>
 
         <activity
-            android:name=".EditNumberActivity"
-            android:parentActivityName=".BlacklistActivity"
+            android:name="com.eaglx.callblocker.EditNumberActivity"
+            android:parentActivityName="com.eaglx.callblocker.BlacklistActivity"
             tools:ignore="UnusedAttribute"/>
 
         <receiver
-            android:name=".CallReceiver"
+            android:name="com.eaglx.callblocker.CallReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
