@@ -37,20 +37,16 @@ import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -67,7 +63,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
     ListView list;
     ArrayAdapter<Number> adapter;
-
 
     protected String[] fileList;
     protected static File basePath;
@@ -107,8 +102,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
             public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
                 return false;
             }
-
-
 
             @Override
             public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
@@ -366,46 +359,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         adapter.clear();
     }
 
-
-    private static class NumberAdapter extends ArrayAdapter<Number> {
-
-        NumberAdapter(Context context) {
-            super(context, R.layout.blacklist_item);
-        }
-
-        @Override
-        public View getView(int position, View view, @NonNull ViewGroup parent) {
-            if (view == null)
-                view = View.inflate(getContext(), R.layout.blacklist_item, null);
-
-            Number number = getItem(position);
-
-            TextView tv = (TextView)view.findViewById(R.id.number);
-            tv.setText(Number.wildcardsDbToView(number.number));
-
-            tv = (TextView)view.findViewById(R.id.name);
-            tv.setText(number.name);
-
-            tv = (TextView)view.findViewById(R.id.rule);
-            if(number.allow == 1) {
-                tv.setText(R.string.allow);
-            }
-            else {
-                tv.setText(R.string.block);
-            }
-
-            tv = (TextView)view.findViewById(R.id.stats);
-            if (number.lastCall != null) {
-                tv.setVisibility(View.VISIBLE);
-                tv.setText(getContext().getResources().getQuantityString(R.plurals.blacklist_call_details, number.timesCalled,
-                        number.timesCalled, SimpleDateFormat.getDateTimeInstance().format(new Date(number.lastCall))));
-            } else
-                tv.setVisibility(View.GONE);
-
-            return view;
-        }
-
-    }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
