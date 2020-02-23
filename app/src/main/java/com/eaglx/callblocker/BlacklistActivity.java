@@ -52,6 +52,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import com.eaglx.callblocker.global.AppConstants;
 import com.eaglx.callblocker.model.BlacklistFile;
 import com.eaglx.callblocker.model.DbHelper;
 import com.eaglx.callblocker.model.Number;
@@ -134,6 +135,8 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 e.printStackTrace();
             }
         }
+
+        AppConstants.setEdit_mode(settings.edit_mode());
     }
 
     protected void requestPermissions() {
@@ -241,6 +244,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         menu.findItem(R.id.notifications).setChecked(settings.showNotifications());
         menu.findItem(R.id.block_out_of_list).setChecked(settings.blockOutOfList());
         menu.findItem(R.id.darkmode).setChecked(settings.darkmode());
+        menu.findItem(R.id.edit_mode).setChecked(settings.edit_mode());
         return true;
     }
 
@@ -258,6 +262,13 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
 
     public void onDarkMode(MenuItem item) {
         settings.darkmode(!item.isChecked());
+        finish();
+        startActivity(new Intent(BlacklistActivity.this, BlacklistActivity.this.getClass()));
+    }
+
+    public void onEditMode(MenuItem item) {
+        settings.edit_mode(!item.isChecked());
+        AppConstants.setEdit_mode(settings.edit_mode());
         finish();
         startActivity(new Intent(BlacklistActivity.this, BlacklistActivity.this.getClass()));
     }
@@ -359,7 +370,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         adapter.clear();
     }
 
-
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
         Number number = adapter.getItem(position);
@@ -368,7 +378,6 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
         intent.putExtra(EditNumberActivity.EXTRA_NUMBER, number.number);
         startActivity(intent);
     }
-
 
     protected static class NumberLoader extends AsyncTaskLoader<Set<Number>> implements BlacklistObserver.Observer {
 

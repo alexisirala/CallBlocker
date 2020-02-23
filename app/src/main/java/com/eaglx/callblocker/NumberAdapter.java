@@ -5,8 +5,10 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.eaglx.callblocker.global.AppConstants;
 import com.eaglx.callblocker.model.Number;
 
 import java.text.SimpleDateFormat;
@@ -46,6 +48,32 @@ public class NumberAdapter extends ArrayAdapter<Number> {
                     number.timesCalled, SimpleDateFormat.getDateTimeInstance().format(new Date(number.lastCall))));
         } else
             tv.setVisibility(View.GONE);
+
+        ImageButton upButton = (ImageButton) view.findViewById(R.id.upEditButton);
+        ImageButton downButton = (ImageButton) view.findViewById(R.id.downEditButton);
+
+        upButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        downButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        if(AppConstants.getEdit_mode()) {
+            upButton.setVisibility(View.VISIBLE);
+            downButton.setVisibility(View.VISIBLE);
+        }
+        else {
+            upButton.setVisibility(View.INVISIBLE);
+            downButton.setVisibility(View.INVISIBLE);
+        }
 
         return view;
     }

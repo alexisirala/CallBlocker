@@ -26,6 +26,12 @@
         android:title="@string/dark_mode" />
 
     <item
+        android:id="@+id/edit_mode"
+        android:checkable="true"
+        android:onClick="onEditMode"
+        android:title="@string/edit_mode" />
+
+    <item
         android:id="@+id/import_blacklist"
         android:onClick="onImportBlacklist"
         android:title="@string/blacklist_import" />

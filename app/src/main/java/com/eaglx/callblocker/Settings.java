@@ -17,7 +17,8 @@ public class Settings {
             PREF_BLOCK_HIDDEN_NUMBERS = "blockHiddenNumbers",
             PREF_NOTIFICATIONS = "notifications",
             PREF_BLOCK_OUT_OF_LIST = "block_out_of_list",
-            PREF_DARK_MODE = "darkmode";
+            PREF_DARK_MODE = "darkmode",
+            PREF_EDIT_MODE = "edit_mode";
 
     private final SharedPreferences pref;
 
@@ -66,6 +67,16 @@ public class Settings {
     public void darkmode(boolean darkmode) {
         pref.edit()
                 .putBoolean(PREF_DARK_MODE, darkmode)
+                .apply();
+    }
+
+    public boolean edit_mode() {
+        return pref.getBoolean(PREF_EDIT_MODE, false);
+    }
+
+    public void edit_mode(boolean edit_mode) {
+        pref.edit()
+                .putBoolean(PREF_EDIT_MODE, edit_mode)
                 .apply();
     }
 

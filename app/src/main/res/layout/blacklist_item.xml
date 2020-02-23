@@ -1,36 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:padding="8dp"
-              android:background="@drawable/select_background">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/select_background"
+    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:text="Name Of Spammer"/>
+        android:layout_weight="2"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/rule"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        tools:text="Allow" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Name Of Spammer" />
 
-    <TextView
-        android:id="@+id/number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        tools:text="+12345678"/>
+        <TextView
+            android:id="@+id/rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:text="Allow" />
 
-    <TextView
-        android:id="@+id/stats"
-        android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:text="+12345678" />
+
+        <TextView
+            android:id="@+id/stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="3 calls, last today" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:text="3 calls, last today"/>
+        android:layout_weight="1"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/upEditButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageButton
+            android:id="@+id/downEditButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
 
 </LinearLayout>
