@@ -32,6 +32,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
@@ -397,7 +398,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
 
                 Set<Number> numbers = new LinkedHashSet<>();
-                Cursor c = db.query(Number._TABLE, null, null, null, null, null, Number.NUMBER);
+                Cursor c = db.query(Number._TABLE, null, null, null, null, null, Number.ID + " ASC");
                 while (c.moveToNext()) {
                     ContentValues values = new ContentValues();
                     DatabaseUtils.cursorRowToContentValues(c, values);

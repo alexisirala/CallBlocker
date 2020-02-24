@@ -18,7 +18,8 @@ public class Number {
             NAME = "name",
             LAST_CALL = "lastCall",
             TIMES_CALLED = "timesCalled",
-            ALLOW = "allow";
+            ALLOW = "allow",
+            ID = "id";
 
     public String number;
     public String name;
@@ -28,6 +29,8 @@ public class Number {
 
     public Integer allow;
 
+    public Integer id;
+
     public static Number fromValues(ContentValues values) {
         Number number = new Number();
         number.number = values.getAsString(NUMBER);
@@ -35,6 +38,7 @@ public class Number {
         number.lastCall = values.getAsLong(LAST_CALL);
         number.timesCalled = values.getAsInteger(TIMES_CALLED);
         number.allow = values.getAsInteger(ALLOW);
+        number.id = values.getAsInteger(ID);
         return number;
     }
 
