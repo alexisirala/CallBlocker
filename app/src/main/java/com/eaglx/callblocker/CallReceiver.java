@@ -91,20 +91,13 @@ public class CallReceiver extends BroadcastReceiver {
 
                         if(number.allow == 0) {
                             rejectCall(context, number);
-
-                            values.clear();
-                            values.put(Number.LAST_CALL, System.currentTimeMillis());
-                            values.put(Number.TIMES_CALLED, number.timesCalled + 1);
-                            db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
-
-                            BlacklistObserver.notifyUpdated();
                         }
-                        else {
-                            values.clear();
-                            values.put(Number.LAST_CALL, System.currentTimeMillis());
-                            values.put(Number.TIMES_CALLED, number.timesCalled + 1);
-                            db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
+                        values.clear();
+                        values.put(Number.LAST_CALL, System.currentTimeMillis());
+                        values.put(Number.TIMES_CALLED, number.timesCalled + 1);
+                        db.update(Number._TABLE, values, Number.NUMBER + "=?", new String[]{number.number});
 
+                        synchronized (this) {
                             BlacklistObserver.notifyUpdated();
                         }
 
@@ -114,7 +107,9 @@ public class CallReceiver extends BroadcastReceiver {
                         number.name = context.getResources().getString(R.string.receiver_notify_unknown_caller);
 
                         rejectCall(context, number);
-                        BlacklistObserver.notifyUpdated();
+                        synchronized (this) {
+                            BlacklistObserver.notifyUpdated();
+                        }
                     }
                     c.close();
                 } finally {

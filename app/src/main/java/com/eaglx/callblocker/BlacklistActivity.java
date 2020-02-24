@@ -270,8 +270,7 @@ public class BlacklistActivity extends AppCompatActivity implements LoaderManage
     public void onEditMode(MenuItem item) {
         settings.edit_mode(!item.isChecked());
         AppConstants.setEdit_mode(settings.edit_mode());
-        finish();
-        startActivity(new Intent(BlacklistActivity.this, BlacklistActivity.this.getClass()));
+        adapter.notifyDataSetChanged();
     }
 
     public void onImportBlacklist(MenuItem item) {

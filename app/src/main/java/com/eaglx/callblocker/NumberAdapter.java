@@ -78,7 +78,7 @@ public class NumberAdapter extends ArrayAdapter<Number> {
                     while (c.moveToNext()) {
                         DatabaseUtils.cursorRowToContentValues(c, values);
 
-                        if(Number.fromValues(values).id == n.id) {
+                        if(Number.fromValues(values).id.equals(n.id)) {
                             if(c.moveToPrevious()) {
                                 DatabaseUtils.cursorRowToContentValues(c, values);
                                 if (Number.fromValues(values).id != n.id) {
@@ -103,6 +103,8 @@ public class NumberAdapter extends ArrayAdapter<Number> {
                         values.put(Number.NUMBER, previous.number);
                         values.put(Number.ALLOW, previous.allow);
                         values.put(Number.ID, previous.id);
+                        values.put(Number.LAST_CALL, previous.lastCall);
+                        values.put(Number.TIMES_CALLED, previous.timesCalled);
                         db.insert(Number._TABLE, null, values);
 
                         values = new ContentValues();
@@ -110,6 +112,8 @@ public class NumberAdapter extends ArrayAdapter<Number> {
                         values.put(Number.NUMBER, n.number);
                         values.put(Number.ALLOW, n.allow);
                         values.put(Number.ID, n.id);
+                        values.put(Number.LAST_CALL, n.lastCall);
+                        values.put(Number.TIMES_CALLED, n.timesCalled);
                         db.insert(Number._TABLE, null, values);
 
                         Set<Number> numbers = new LinkedHashSet<>();
@@ -169,6 +173,8 @@ public class NumberAdapter extends ArrayAdapter<Number> {
                         values.put(Number.NUMBER, next.number);
                         values.put(Number.ALLOW, next.allow);
                         values.put(Number.ID, next.id);
+                        values.put(Number.LAST_CALL, next.lastCall);
+                        values.put(Number.TIMES_CALLED, next.timesCalled);
                         db.insert(Number._TABLE, null, values);
 
                         values = new ContentValues();
@@ -176,6 +182,8 @@ public class NumberAdapter extends ArrayAdapter<Number> {
                         values.put(Number.NUMBER, n.number);
                         values.put(Number.ALLOW, n.allow);
                         values.put(Number.ID, n.id);
+                        values.put(Number.LAST_CALL, n.lastCall);
+                        values.put(Number.TIMES_CALLED, n.timesCalled);
                         db.insert(Number._TABLE, null, values);
 
                         Set<Number> numbers = new LinkedHashSet<>();
