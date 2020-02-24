@@ -21,7 +21,7 @@
     <string name="allow">Allow</string>
     <string name="block">Block</string>
 
-    <string name="edit_mode">Edit mode</string>
+    <string name="edit_mode">Edit view mode</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Add number</string>

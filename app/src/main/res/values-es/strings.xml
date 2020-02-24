@@ -13,7 +13,7 @@
         <item quantity="other">%1$d llamadas, última a las: %2$s</item>
     </plurals>
 
-    <string name="edit_mode">Modo de edición</string>
+    <string name="edit_mode">Editar modo de vista</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Añadir número</string>

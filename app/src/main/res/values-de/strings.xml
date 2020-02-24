@@ -18,7 +18,7 @@
     <string name="allow">Erlauben</string>
     <string name="block">Verbieten</string>
 
-    <string name="edit_mode">Bearbeitungsmodus</string>
+    <string name="edit_mode">Ansichtsmodus bearbeiten</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Nummer hinzufügen</string>

@@ -21,7 +21,7 @@
     <string name="allow">Dozwolony</string>
     <string name="block">Zablokowany</string>
 
-    <string name="edit_mode">Tryb edycji</string>
+    <string name="edit_mode">Tryb edycji widoku</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Dodaj numer</string>
