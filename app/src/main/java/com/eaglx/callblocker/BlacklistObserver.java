@@ -9,6 +9,7 @@
 package com.eaglx.callblocker;
 
 import java.lang.ref.WeakReference;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,11 +30,20 @@ public class BlacklistObserver {
     }
 
     public static void notifyUpdated() {
-        for (WeakReference<Observer> ref : observers)
+//        for (WeakReference<Observer> ref : observers) { // Throws the ConcurrentModificationException
+//            if (ref.get() != null)
+//                ref.get().onBlacklistUpdate();
+//            else
+//                observers.remove(ref);
+//        }
+        for (Iterator<WeakReference<Observer>> iterator = observers.iterator(); iterator.hasNext();) {
+            WeakReference<Observer> ref = iterator.next();
             if (ref.get() != null)
                 ref.get().onBlacklistUpdate();
             else
-                observers.remove(ref);
+                //observers.remove(ref);
+                iterator.remove();
+        }
     }
 
 

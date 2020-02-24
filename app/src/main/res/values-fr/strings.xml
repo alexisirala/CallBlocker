@@ -16,7 +16,7 @@
     <string name="blacklist_export">Exporter la liste noire</string>
     <string name="blacklist_exported_to">Exporté vers</string>
 
-    <string name="edit_mode">Modifier le mode d'affichage</string>
+    <string name="edit_mode">Modifier le mode affichage</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Ajouter un numéro</string>
