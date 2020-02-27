@@ -22,9 +22,10 @@ Copyright (C) [NoPhoneSpam contributors](https://gitlab.com/bitfireAT/NoPhoneSpa
 
 > Orginal web site: https://gitlab.com/bitfireAT/NoPhoneSpam/
 
+Copyright (C) [eaglx](https://github.com/eaglx).
 
 ## Privacy policy
 
-NoPhoneSpam stores the blocked numbers in a local database. No information
+CallBlocker stores the blocked numbers in a local database. No information
 is transmitted to anywhere in the Internet. There's no tracking and there are no ads.
 
