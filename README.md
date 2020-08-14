@@ -12,6 +12,10 @@ but as a replacement for Android's missing call blocking feature.
 
 <img src="doc/view_1.jpg" height="300"> <img src="doc/view_2.jpg" height="300"> <img src="doc/view_3.jpg" height="300"> <img src="doc/view_4.jpg" height="300"> <img src="doc/view_5.jpg" height="300">
 
+## APK
+
+The latest release of the *CallBlocker* can be downloaded from [LINK](https://github.com/eaglx/CallBlocker/releases/tag/v0.2.14).
+
 ## License 
 
 This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome
