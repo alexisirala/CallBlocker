@@ -12,16 +12,16 @@
         <item quantity="one">Called at %2$s</item>
         <item quantity="other">%1$d calls, last: %2$s</item>
     </plurals>
-    <string name="block_out_of_list">Block numbers out of list</string>
-    <string name="dark_mode">Dark mode</string>
-    <string name="blacklist_import">Import Blacklist</string>
-    <string name="blacklist_export">Export Blacklist</string>
-    <string name="blacklist_exported_to">Exported to</string>
+    <string name="block_out_of_list" translatable="false">Block numbers out of list</string>
+    <string name="dark_mode" translatable="false">Dark mode</string>
+    <string name="blacklist_import" translatable="false">Import Blacklist</string>
+    <string name="blacklist_export" translatable="false">Export Blacklist</string>
+    <string name="blacklist_exported_to" translatable="false">Exported to</string>
 
-    <string name="allow">Allow</string>
-    <string name="block">Block</string>
+    <string name="allow" translatable="false">Allow</string>
+    <string name="block" translatable="false">Block</string>
 
-    <string name="edit_mode">Edit view mode</string>
+    <string name="edit_mode" translatable="false">Edit view mode</string>
 
     <!-- EditActivity -->
     <string name="edit_add_number">Add number</string>
@@ -36,12 +36,12 @@
     <string name="edit_number_hints">Enter the number in appropriate format (as Android would show in your dialer e.g. +COUNTRY-NUMBER). Use \"#\" for exactly one digit and \"*\" as a wildcard for zero or more digits (not longer than the correct phone number).</string>
     <string name="edit_must_not_be_empty">Must not be empty</string>
     <string name="edit_changes_saved">Changes saved</string>
-    <string name="allow_call">Allow call</string>
+    <string name="allow_call" translatable="false">Allow call</string>
 
     <!-- CallReceiver -->
     <string name="receiver_notify_call_rejected">Call rejected</string>
     <string name="receiver_notify_private_number">Private number</string>
-    <string name="receiver_notify_unknown_caller">Unknown caller</string>
-    <string name="call_blocking_unsupported">Can\'t block calls in this Android version</string>
+    <string name="receiver_notify_unknown_caller" translatable="false">Unknown caller</string>
+    <string name="call_blocking_unsupported" translatable="false">Can\'t block calls in this Android version</string>
 
 </resources>

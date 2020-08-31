@@ -38,6 +38,5 @@
     <string name="blacklist_exported_to">Se ha exportado como</string>
     <string name="blacklist_export">Exportar lista</string>
     <string name="receiver_notify_unknown_caller">Número oculto</string>
-    <string name="blacklist_whitelist">Lista blanca</string>
 
 </resources>

@@ -24,10 +24,10 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + Number._TABLE + "(" +
                 Number.NUMBER + " TEXT NOT NULL," +
-                Number.NAME + " TEXT NULL," +
-                Number.LAST_CALL + " INTEGER NULL," +
+                Number.NAME + " TEXT," +
+                Number.LAST_CALL + " INTEGER," +
                 Number.TIMES_CALLED + " INTEGER NOT NULL DEFAULT 0," +
-                Number.ALLOW + " INTEGER NULL," +
+                Number.ALLOW + " INTEGER," +
                 Number.ID + " INTEGER PRIMARY KEY" +
         ")");
     }
