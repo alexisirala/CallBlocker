@@ -14,7 +14,7 @@ but as a replacement for Android's missing call blocking feature.
 
 ## APK
 
-The latest release of the *CallBlocker* can be downloaded from [LINK](https://github.com/eaglx/CallBlocker/releases/tag/v0.2.14).
+The latest release of the *CallBlocker* can be downloaded from [LINK](https://github.com/eaglx/CallBlocker/releases/tag/v0.2.15).
 
 ## License 
 
